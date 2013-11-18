@@ -1,20 +1,32 @@
-puts "=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+="
-puts "#        ____        _       _   _                     _                        #"
-puts "#       / __ \\      (_)     | | (_)           /\\      | |                       #"
-puts "#      | |  | |_   _ _ _ __ | |_ _ _ __      /  \\   __| | __ _ _ __ ___         #"
-puts "#      | |  | | | | | | '_ \\| __| | '_ \\    / /\\ \\ / _` |/ _` | '_ ` _ \\        #"
-puts "#      | |__| | |_| | | | | | |_| | | | |  / ____ \\ (_| | (_| | | | | | |       #"
-puts "#       \\___\\_\\\\__,_|_|_| |_|\\__|_|_| |_| /_/    \\_\\__,_|\\__,_|_| |_| |_|       #"
-puts "#                                                                               #"
-puts "=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+="
-#This is look weird if your looking into the file, but it is right.
-puts ""
-puts "1776 Park Ave. #4-354 Park City, UT 84060 | (407) 443-1720 | QuintinAdam@live.com"
-puts ""
-sleep(2)
-puts "Welcome to Quintin Adam's Somewhat Interactive Resume. What would you like to know?"
-puts ""
-@more = true
+def start
+  @more = true
+  print "Loading Quintin's Resume"
+  100.times do
+    sleep((1.0/50))
+    print "."
+  end
+  print " [100%]\n\n"
+  puts "=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+="
+  puts "#        ____        _       _   _                     _                        #"
+  puts "#       / __ \\      (_)     | | (_)           /\\      | |                       #"
+  puts "#      | |  | |_   _ _ _ __ | |_ _ _ __      /  \\   __| | __ _ _ __ ___         #"
+  puts "#      | |  | | | | | | '_ \\| __| | '_ \\    / /\\ \\ / _` |/ _` | '_ ` _ \\        #"
+  puts "#      | |__| | |_| | | | | | |_| | | | |  / ____ \\ (_| | (_| | | | | | |       #"
+  puts "#       \\___\\_\\\\__,_|_|_| |_|\\__|_|_| |_| /_/    \\_\\__,_|\\__,_|_| |_| |_|       #"
+  puts "#                                                                               #"
+  puts "=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+="
+  #My name might look broken if you are looking at the ruby file. But when you run the file in your terminal it will look perfect. Must be magic.
+  puts ""
+  puts " Ruby on Rails Web Developer    |    Quintin Adam    |    QuintinJAdam@gmail.com "
+  puts ""
+  sleep(2)
+  puts "Welcome to Quintin Adam's Somewhat Interactive Resume. What would you like to know?"
+  puts ""
+  while @more == true do
+   menu
+   show_more?
+  end
+end
 
 def menu
   puts "1. Personal 'Summary'"
@@ -23,7 +35,7 @@ def menu
   puts "4. 'Contact' Info"
   puts "5. 'All'"
   puts ""
-  puts "Enter a number or the corresponding word:"
+  puts "Enter a number or the corresponding word to view the information:"
   input = gets.chomp.downcase
   case input
   when '1', 'summary'
@@ -44,9 +56,9 @@ end
 
 def summary   
   puts "~=~ Summary ~=~\n\n"   
-  puts "A well rounded jr. rails developer that has self taught himself programming as well as attended a 11 week intensive Ruby on Rails boot camp to gain more advanced knowledge.\n\nThe desire to continue to learn everything about web development and programming in general.\n\nFull of energy, hard work and enthusiasm for all things programming, he loves a good challenge and wants to work for a company that can provide a challenge as well as the opportunity to learn more.\n\nLove to work with Ruby, Rails, SCSS, Slim/HAML, CoffeeScript and more, there is much to be offered and yet plenty more still to learned.\n\n" 
+  puts "A well rounded junior rails developer that has self taught himself programming as well as attended a 11 week intensive Ruby on Rails boot camp to gain more advanced knowledge.\n\nHe has the desire to continue to learn everything he can about web development and programming.\n\nFull of energy, hard work and enthusiasm for all things in life, he loves a good challenge and wants to work for a company that can provide a challenge as well as the opportunity to learn more.\n\nLoves to work with Ruby, Rails, SCSS, Slim/HAML, CoffeeScript and more.\n\n" 
 end
-# With only half a years experience of programing in ruby looking to work on exciting projects with Sees programming as a way of solving problems and improving communication between people and understands that people come before technology.exciting clients.
+
 def skills
   languages = [ "Ruby", "JavaScript", "HTML", "CSS", "SCSS", "CoffeScript", "jQuery", "Ajax", "HAML", "Slim" ].sort
   last_lang = languages.pop
@@ -72,23 +84,18 @@ end
 def education
   puts "~=~ Education ~=~\n\n"
   puts "Fall 2013 : DevPoint Labs : 11 week Ruby on Rails boot camp.\n\n"
-  puts "Spring 2013 : Teaching my self Ruby, JavaScript, HTML and CSS using many great online resources.\n\n"
+  puts "Spring 2013 : Teaching myself Ruby, JavaScript, HTML and CSS using many great online resources.\n\n"
   puts "Fall 2009 : The Recording Workshop : 9 week audio engineering workshop.\n\n"
   puts "Spring 2009 : Graduated from Northville High School.\n\n"
 end
 
 def contact
-  email = "QuintinAdam@live.com"
-  phone = "407.443.1720"
-  address = "Quintin Adam\n          1776 Park Ave. #4-435\n          Park City, UT 84060\n"
+  email = "QuintinJAdam@gmail.com"
   website = "http://www.quintinadam.com/"
   github = "https://github.com/QuintinAdam/"
   linkedin = "http://www.linkedin.com/in/quintinadam"
   puts "~=~ Contact Info: ~=~\n\n"
   puts "Email:    " + email
-  puts "Phone:    " + phone
-  puts "Address:  " + address
-  puts ""
   puts "Website:  " + website
   puts "Github:   " + github
   puts "LinkedIn: " + linkedin
@@ -118,10 +125,5 @@ def show_more?
     show_more?
   end
 end
-
-
-while @more == true do
-  menu
-  show_more?
-end
-
+#Let's Start!
+start
