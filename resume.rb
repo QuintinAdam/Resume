@@ -7,6 +7,7 @@ puts "#      | |__| | |_| | | | | | |_| | | | |  / ____ \\ (_| | (_| | | | | | |
 puts "#       \\___\\_\\\\__,_|_|_| |_|\\__|_|_| |_| /_/    \\_\\__,_|\\__,_|_| |_| |_|       #"
 puts "#                                                                               #"
 puts "=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+="
+#This is look weird if your looking into the file, but it is right.
 puts ""
 puts "1776 Park Ave. #4-354 Park City, UT 84060 | (407) 443-1720 | QuintinAdam@live.com"
 puts ""
@@ -41,11 +42,11 @@ def menu
   end
 end
 
-def summary
-  puts "~=~ Summary ~=~\n\n"
-  puts "\n\n"
+def summary   
+  puts "~=~ Summary ~=~\n\n"   
+  puts "A well rounded jr. rails developer that has self taught himself programming as well as attended a 11 week intensive Ruby on Rails boot camp to gain more advanced knowledge.\n\nThe desire to continue to learn everything about web development and programming in general.\n\nFull of energy, hard work and enthusiasm for all things programming, he loves a good challenge and wants to work for a company that can provide a challenge as well as the opportunity to learn more.\n\nLove to work with Ruby, Rails, SCSS, Slim/HAML, CoffeeScript and more, there is much to be offered and yet plenty more still to learned.\n\n" 
 end
-
+# With only half a years experience of programing in ruby looking to work on exciting projects with Sees programming as a way of solving problems and improving communication between people and understands that people come before technology.exciting clients.
 def skills
   languages = [ "Ruby", "JavaScript", "HTML", "CSS", "SCSS", "CoffeScript", "jQuery", "Ajax", "HAML", "Slim" ].sort
   last_lang = languages.pop
