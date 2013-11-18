@@ -1,7 +1,7 @@
 Quintin Adam Interactive Resume
 =========
 
-**How to use:
+###How to use:
 
   - Clone this repository onto your computer.
   - In your terminal navigate to the folder to cloned the repo.
@@ -10,3 +10,4 @@ Quintin Adam Interactive Resume
     ```
     load 'resume.rb'
     ``` 
+    
