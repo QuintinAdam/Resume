@@ -55,38 +55,44 @@ def menu
 end
 
 def summary   
-  puts "~=~ Summary ~=~\n\n"   
-  puts "A well rounded junior rails developer that has self taught himself programming as well as attended a 11 week intensive Ruby on Rails boot camp to gain more advanced knowledge.\n\nHe has the desire to continue to learn everything he can about web development and programming.\n\nFull of energy, hard work and enthusiasm for all things in life, he loves a good challenge and wants to work for a company that can provide a challenge as well as the opportunity to learn more.\n\nLoves to work with Ruby, Rails, SCSS, Slim/HAML, CoffeeScript and more.\n\n" 
+  puts "<%= Summary %>\n\n"   
+  puts "A well rounded rails developer that has self-taught himself programming as \nwell as attended a Ruby on Rails boot camp to gain more advanced knowledge.
+
+Has the desire to continue to learn everything about web development and programming. \nLoves to learn and help others to learn. Can quickly understand new ideas and concepts. \nStrong organization and productive project management skills.
+
+Full of energy, hard work and enthusiasm. Enjoys a good challenge and wants to work on \nprojects that can provide a challenge as well as the opportunity to learn more. \nWorks good on a team but is also a strong leader. Self-motivated with great \ntroubleshooting and problem solving skills.
+
+Loves to work with Ruby, Rails, SCSS, Slim/HAML, CoffeeScript and more.\n\n" 
 end
 
 def skills
   languages = [ "Ruby", "JavaScript", "HTML", "CSS", "SCSS", "CoffeScript", "jQuery", "Ajax", "HAML", "Slim" ].sort
   last_lang = languages.pop
-  gems = [ "Simple Form", "Devise", "Figaro", "Better Errors", "Guard", "Letter Opener", "Xray-Rails", "Cancan", "Rolify", "Slim", "Draper", "Powder"].sort
+  gems = [ "Simple Form", "Devise", "Figaro", "Better Errors", "Guard", "Letter Opener", "Xray-Rails", "Cancan", "Rolify", "Slim", "Draper", "Powder", "Omniauth", "Thin", "Unicorn"].sort
   last_gem = gems.pop
   tools = [ "Git", "Pow", "RVM", "Sublime Text", "Textmate", "ZSH", "ITerm", "Pry", "Pry-Rails", "CodeClimate", "Gemnasium" ].sort
   last_tool = tools.pop
-  tests = [ "TestUnit", "RSpec", "MiniTest", "Capybara", "FactoryGirl", "Coveralls", "Travis", "Faker" ].sort
+  tests = [ "TestUnit", "RSpec", "MiniTest", "Capybara", "FactoryGirl", "Coveralls", "Travis", "Faker", "Email Spec" ].sort
   last_test = tests.pop
-  database = [ "MySQL", "PostgreSQL", "SQLite" ].sort
+  database = [ "PostgreSQL", "SQLite3" ].sort
   last_data = database.pop
   frameworks = ["Ruby on Rails"]
-  puts "~=~ Programming Skills ~=~\n\n"
-  puts "Programming languages that I have a strong understanding of: #{languages.join(", ") + " and " + last_lang}.\n\n"
-  puts "Gems I use: #{gems.join(", ") + " and " + last_gem}.\n\n"
-  puts "Tools I use: #{tools.join(", ") + " and " + last_tool}.\n\n"
-  puts "What I use to test: #{tests.join(", ") + " and " + last_test}.\n\n"
-  puts "Databases I've worked with: #{database.join(", ") + " and " + last_data}.\n\n"
-  puts "Framework I use: #{frameworks.pop}.\n\n"
-  puts "What are cool: Bow ties are cool.\n\n"
+  puts "<%= Programming Skills %>\n\n"
+  puts "Languages: #{languages.join(", ") + " and " + last_lang}.\n\n"
+  puts "Gems: #{gems.join(", ") + " and " + last_gem}.\n\n"
+  puts "Tools: #{tools.join(", ") + " and " + last_tool}.\n\n"
+  puts "Testing: #{tests.join(", ") + " and " + last_test}.\n\n"
+  puts "Databases: #{database.join(", ") + " and " + last_data}.\n\n"
+  # puts "Frameworks: #{frameworks.pop}.\n\n"
+  puts "What are cool: Bow ties.\n\n"
 end
 
 def education
-  puts "~=~ Education ~=~\n\n"
-  puts "Fall 2013 : DevPoint Labs : 11 week Ruby on Rails boot camp.\n\n"
-  puts "Spring 2013 : Teaching myself Ruby, JavaScript, HTML and CSS using many great online resources.\n\n"
-  puts "Fall 2009 : The Recording Workshop : 9 week audio engineering workshop.\n\n"
-  puts "Spring 2009 : Graduated from Northville High School.\n\n"
+  puts "<%= Education %>\n\n"
+  puts "Fall 2013: DevPoint Labs: Ruby on Rails boot camp.\n\n"
+  puts "Spring 2013: Learned Ruby, JavaScript, HTML and CSS.\n\n"
+  puts "Fall 2009: The Recording Workshop: Audio engineering workshop.\n\n"
+  puts "Spring 2009: Graduated from Northville High School.\n\n"
 end
 
 def contact
@@ -94,7 +100,7 @@ def contact
   website = "http://www.quintinadam.com/"
   github = "https://github.com/QuintinAdam/"
   linkedin = "http://www.linkedin.com/in/quintinadam"
-  puts "~=~ Contact Info: ~=~\n\n"
+  puts "<%= Contact Info: %>\n\n"
   puts "Email:    " + email
   puts "Website:  " + website
   puts "Github:   " + github
@@ -114,7 +120,7 @@ end
 
 def show_more?
   sleep(3)
-  puts "Would you like to go back to the menu? (y/n)"
+  puts "\nWould you like to go back to the menu? (y/n)"
   you_want_more = gets.chomp.downcase
   if you_want_more == 'y'
     @more = true
