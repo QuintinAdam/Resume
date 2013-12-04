@@ -12,4 +12,5 @@ Quintin Adam's Interactive Resume
     ```
     load 'resume.rb'
     ``` 
-  - That will run the Resume.  
+  - That will run the Resume.
+  - If you prefer a PDF version send me an email. QuintinJAdam@gmail.com  
